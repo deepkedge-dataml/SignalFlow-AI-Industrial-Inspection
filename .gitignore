@@ -1,0 +1,61 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local IDE and OS state
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Node / Expo / React Native
+mobile_app/node_modules/
+mobile_app/.expo/
+mobile_app/.expo-shared/
+mobile_app/dist/
+mobile_app/web-build/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime uploads and generated inspection outputs
+backend/uploaded_images/*
+!backend/uploaded_images/.gitkeep
+backend/inspection_outputs/
+
+# Model artifacts and datasets
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.pkl
+*.joblib
+data/
+datasets/
+models/
+checkpoints/
+
+# Logs and local reports
+*.log
+logs/
+tmp/
+temp/
