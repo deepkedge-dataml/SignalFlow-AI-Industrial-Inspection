@@ -1,6 +1,9 @@
-# SignalFlow Mobile Upload
 
-SignalFlow Mobile Upload is a stage-two prototype for capturing or selecting product images from an Expo mobile app, sending them to a FastAPI backend, and running a live quality-inspection pipeline.
+# SignalFlow AI – Industrial Inspection System
+
+SignalFlow AI is a full-stack prototype for industrial visual inspection. It allows users to upload product images via web interface, process them through a FastAPI backend, run anomaly detection using PatchCore, optionally enrich the result with Azure Vision, and generate readable inspection explanations using an LLM.
+
+The project demonstrates how computer vision, backend APIs, web interfaces, and LLM-based reasoning can be combined into one inspection workflow.
 
 The backend currently supports:
 
@@ -9,6 +12,35 @@ The backend currently supports:
 - PatchCore inference using an existing trained checkpoint
 - Live registry JSON generation for uploaded images
 - Optional LLM explanation for completed inspections
+
+## Skills Demonstrated
+
+- Full-stack AI prototype development
+- FastAPI backend development
+- REST API design for image upload and inspection results
+- Web-based image upload interface
+- Computer vision model integration using PatchCore
+- Azure Vision API integration
+- LLM-based explanation generation
+- Structured JSON result generation
+- GitHub repository preparation and privacy cleanup
+- Environment variable management for API keys and local configuration
+
+## System Architecture
+
+The SignalFlow AI inspection workflow follows this structure:
+
+Web Frontend
+-> FastAPI Backend
+-> Image Upload Endpoint
+-> Uploaded Image Storage
+-> Azure Vision Classification
+-> PatchCore Anomaly Detection
+-> Live Registry JSON
+-> Optional LLM Explanation
+-> Web Result Display
+
+The web frontend allows the user to upload an inspection image. The FastAPI backend receives the image, stores it locally, runs the inspection pipeline, and returns structured results. PatchCore is used for anomaly detection, Azure Vision can provide additional image classification, and the LLM layer converts technical outputs into readable inspection explanations.
 
 ## Project Structure
 
@@ -117,11 +149,14 @@ Mobile app image
 
 ## AI-Assisted Development Note
 
-This stage-two SignalFlow prototype was developed with support from AI-assisted coding tools, including OpenAI Codex. Codex was used as a development assistant for parts of the mobile app workflow, backend integration review, documentation, `.gitignore` preparation, GitHub readiness checks, and privacy cleanup.
+This stage-two SignalFlow prototype was developed from my own project idea and architecture plan. The main concept, inspection workflow, system design, and project direction were defined by me. AI-assisted coding tools, including OpenAI Codex, were used as development support to help convert the planned architecture into a working prototype.
 
-Codex did not create the project independently. Final project direction, implementation choices, testing, configuration, validation, and release decisions were reviewed manually.
+Codex was used as a development assistant for parts of the web inspection workflow, backend integration review, documentation, `.gitignore` preparation, GitHub readiness checks, and privacy cleanup.
+
+Codex did not create the project independently. Final project direction, architecture decisions, implementation choices, testing, configuration, validation, and release decisions were reviewed manually.
 
 During GitHub preparation, Codex helped inspect the project structure and identify privacy risks that should not be committed to a public repository, including local IDE workspace files, `.env` files, generated uploads and inspection outputs, local machine paths, API keys, and model artifacts. Codex also helped refactor configuration so private values are loaded through environment variables or placeholders instead of being hard-coded into files intended for GitHub.
+
 
 ## GitHub Preparation
 
@@ -131,7 +166,24 @@ Recommended first branch for stage two:
 git init
 git checkout -b stage-2-mobile-patchcore
 git add .
+
+
 git status --short --ignored
 ```
 
 Before pushing, confirm that `.env`, `.idea/`, `node_modules/`, uploaded images, inspection outputs, checkpoints, and datasets are ignored.
+
+
+## Sample Outputs
+
+### Web Upload Interface
+
+![SignalFlow Upload Area](samples/signalflow_upload_area.png)
+
+### Azure Vision and Image Metadata
+
+![SignalFlow Metadata Result](samples/signalflow_metadata_result.png)
+
+### PatchCore and LLM Analysis
+
+![SignalFlow AI Analysis Result](samples/signalflow_ai_analysis_result.png)
