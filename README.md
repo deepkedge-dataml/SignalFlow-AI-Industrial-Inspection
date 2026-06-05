@@ -172,3 +172,18 @@ git status --short --ignored
 ```
 
 Before pushing, confirm that `.env`, `.idea/`, `node_modules/`, uploaded images, inspection outputs, checkpoints, and datasets are ignored.
+
+
+## Sample Outputs
+
+### Web Upload Interface
+
+![SignalFlow Upload Area](samples/signalflow_upload_area.png)
+
+### Azure Vision and Image Metadata
+
+![SignalFlow Metadata Result](samples/signalflow_metadata_result.png)
+
+### PatchCore and LLM Analysis
+
+![SignalFlow AI Analysis Result](samples/signalflow_ai_analysis_result.png)
