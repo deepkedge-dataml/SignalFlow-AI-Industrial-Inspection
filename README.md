@@ -1,6 +1,9 @@
-# SignalFlow Mobile Upload
 
-SignalFlow Mobile Upload is a stage-two prototype for capturing or selecting product images from an Expo mobile app, sending them to a FastAPI backend, and running a live quality-inspection pipeline.
+# SignalFlow AI – Industrial Inspection System
+
+SignalFlow AI is a full-stack prototype for industrial visual inspection. It allows users to upload product images via web interface, process them through a FastAPI backend, run anomaly detection using PatchCore, optionally enrich the result with Azure Vision, and generate readable inspection explanations using an LLM.
+
+The project demonstrates how computer vision, backend APIs, mobile interfaces, and LLM-based reasoning can be combined into one inspection workflow.
 
 The backend currently supports:
 
@@ -117,11 +120,14 @@ Mobile app image
 
 ## AI-Assisted Development Note
 
-This stage-two SignalFlow prototype was developed with support from AI-assisted coding tools, including OpenAI Codex. Codex was used as a development assistant for parts of the mobile app workflow, backend integration review, documentation, `.gitignore` preparation, GitHub readiness checks, and privacy cleanup.
+This stage-two SignalFlow prototype was developed from my own project idea and architecture plan. The main concept, inspection workflow, system design, and project direction were defined by me. AI-assisted coding tools, including OpenAI Codex, were used as development support to help convert the planned architecture into a working prototype.
 
-Codex did not create the project independently. Final project direction, implementation choices, testing, configuration, validation, and release decisions were reviewed manually.
+Codex was used as a development assistant for parts of the web inspection workflow, backend integration review, documentation, `.gitignore` preparation, GitHub readiness checks, and privacy cleanup.
+
+Codex did not create the project independently. Final project direction, architecture decisions, implementation choices, testing, configuration, validation, and release decisions were reviewed manually.
 
 During GitHub preparation, Codex helped inspect the project structure and identify privacy risks that should not be committed to a public repository, including local IDE workspace files, `.env` files, generated uploads and inspection outputs, local machine paths, API keys, and model artifacts. Codex also helped refactor configuration so private values are loaded through environment variables or placeholders instead of being hard-coded into files intended for GitHub.
+
 
 ## GitHub Preparation
 
