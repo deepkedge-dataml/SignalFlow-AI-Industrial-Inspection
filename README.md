@@ -3,7 +3,7 @@
 
 SignalFlow AI is a full-stack prototype for industrial visual inspection. It allows users to upload product images via web interface, process them through a FastAPI backend, run anomaly detection using PatchCore, optionally enrich the result with Azure Vision, and generate readable inspection explanations using an LLM.
 
-The project demonstrates how computer vision, backend APIs, mobile interfaces, and LLM-based reasoning can be combined into one inspection workflow.
+The project demonstrates how computer vision, backend APIs, web interfaces, and LLM-based reasoning can be combined into one inspection workflow.
 
 The backend currently supports:
 
@@ -12,6 +12,35 @@ The backend currently supports:
 - PatchCore inference using an existing trained checkpoint
 - Live registry JSON generation for uploaded images
 - Optional LLM explanation for completed inspections
+
+## Skills Demonstrated
+
+- Full-stack AI prototype development
+- FastAPI backend development
+- REST API design for image upload and inspection results
+- Web-based image upload interface
+- Computer vision model integration using PatchCore
+- Azure Vision API integration
+- LLM-based explanation generation
+- Structured JSON result generation
+- GitHub repository preparation and privacy cleanup
+- Environment variable management for API keys and local configuration
+
+## System Architecture
+
+The SignalFlow AI inspection workflow follows this structure:
+
+Web Frontend
+-> FastAPI Backend
+-> Image Upload Endpoint
+-> Uploaded Image Storage
+-> Azure Vision Classification
+-> PatchCore Anomaly Detection
+-> Live Registry JSON
+-> Optional LLM Explanation
+-> Web Result Display
+
+The web frontend allows the user to upload an inspection image. The FastAPI backend receives the image, stores it locally, runs the inspection pipeline, and returns structured results. PatchCore is used for anomaly detection, Azure Vision can provide additional image classification, and the LLM layer converts technical outputs into readable inspection explanations.
 
 ## Project Structure
 
@@ -137,6 +166,8 @@ Recommended first branch for stage two:
 git init
 git checkout -b stage-2-mobile-patchcore
 git add .
+
+
 git status --short --ignored
 ```
 
